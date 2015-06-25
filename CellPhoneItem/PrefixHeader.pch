@@ -1,0 +1,37 @@
+//
+//  PrefixHeader.pch
+//  CellPhoneItem
+//
+//  Created by lanouhn on 15/6/24.
+//  Copyright (c) 2015年 MapleStory. All rights reserved.
+//
+
+#ifndef CellPhoneItem_PrefixHeader_pch
+#define CellPhoneItem_PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif
+
+// 导航条的颜色
+#define kNavColor [UIColor colorWithRed:40.0/255.0 green:128.0/255.0 blue:248.0/255.0 alpha:1]
+// 状态栏高度
+#define kStatusHeight [[UIApplication sharedApplication] statusBarFrame].size.height
+
+
+
+#import "ProductDetailsView.h"
+#import "ProductDetailsViewController.h"
+#import "NaBelowView.h"
+#import "DetailedParametersViewController.h"
+#import "PicturViewController.h"
+#import "RootViewController.h"
+#import "PriceBar.h"
+#import "AppraisalBar.h"                              
+#import "NetworkEngine.h"                             // 请求网络数据
+#import "EGOImageView.h"                              // 网络异步加载图片
+#import "BigPic.h"                                    // 创建大图片的自定义cell
+#import "CreatWidget.h"                               // 创建控件的类
+#import "Function.h"                                  // 功能类
+
