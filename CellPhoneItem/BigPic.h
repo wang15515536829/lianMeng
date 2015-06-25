@@ -12,9 +12,11 @@
 
 @property (nonatomic , retain) UIImageView *imageViewK;
 @property (nonatomic , retain) UILabel *labelK;
-
+@property (nonatomic , retain) UILabel *nameL;
+@property (nonatomic , retain) UILabel *briefL;
+@property (nonatomic , retain) UILabel *priceL;
 
 // 用来计算cell的高度
-- (void)calculateHeight;
+- (CGFloat)calculateHeight;
 
 @end

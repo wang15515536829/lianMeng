@@ -22,5 +22,6 @@
 @property (nonatomic , retain) NSMutableArray *AllModelArr;     // 总的Model数组
 @property (nonatomic , retain) NSDictionary *dic;
 @property (nonatomic , retain) UIScrollView *myScrollView;
+@property (nonatomic , assign) CGFloat Cellheight;
 
 @end

@@ -161,7 +161,7 @@
     }
     
     // 自适应高度
-    [bigPicCell calculateHeight];
+    self.Cellheight = [bigPicCell calculateHeight];
     
     return bigPicCell;
     
@@ -171,13 +171,8 @@
 #pragma mark - cell自适应高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.section == 1) {
-        BigPic *bigPicCell = (BigPic *)[self tableView:self.tableView cellForRowAtIndexPath:indexPath];
-        
-        return bigPicCell.frame.size.height;
-    } else 
-    
-    
+
+    return self.Cellheight;
 }
 
 - (void)dealloc
