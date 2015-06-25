@@ -65,6 +65,10 @@
     // 请求数据
     [self getDataFromUrl:nil];
     
+    // 数组初始化
+    self.proDetailArr = [NSMutableArray array];
+    self.paraArr = [NSMutableArray array];
+    self.extraProsArr = [NSMutableArray array];
 }
 
 // 懒加载
@@ -98,9 +102,10 @@
     // 解析第三个ExtraPros数据
     [self getExtraProsModelArr:self.dic];
     
+    [self.tableView reloadData];
 }
 
-#pragma mark - 解析4个model数据
+#pragma mark - 解析3个model数据
 // 第一个PrDetail数据
 - (void)getProDetailModelArr:(NSDictionary *)dic
 {
@@ -116,54 +121,69 @@
 // 第二个Param数据
 - (void)getParamModelArr:(NSDictionary *)dic
 {
-    NSDictionary *dicPar = [dic objectForKey:@"paramArr"];
+    NSArray *arrPar = [dic objectForKey:@"paramArr"];
+    for (NSDictionary *dicK in arrPar) {
+        ParamArr *paramModel = [[ParamArr alloc] initWithDictionary:dicK];
+        [self.paraArr addObject:paramModel];
+    }
+    [self.AllModelArr addObject:self.paraArr];
 }
 
 // 第三个ExtraPros数据
 - (void)getExtraProsModelArr:(NSDictionary *)dic
 {
-    
+    NSArray *arrExt = [dic objectForKey:@"extraPros"];
+    for (NSDictionary *dicK in arrExt) {
+        ExtraPros *extraPros = [[ExtraPros alloc] initWithDictionary:dicK];
+        [self.extraProsArr addObject:extraPros];
+    }
+    [self.AllModelArr addObject:self.extraProsArr];
 }
-
 
 #pragma mark - tableView的代理方法
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 2;
+    NSLog(@"%ld" , self.AllModelArr.count);
+    return self.AllModelArr.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    return [[self.AllModelArr objectAtIndex:section] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *bigPicid = @"bigPicid";
+    static NSString *bigPicid = @"bigPicid";
     BigPic *bigPicCell = [tableView dequeueReusableCellWithIdentifier:bigPicid];
     if (bigPicCell == nil) {
         bigPicCell = [[BigPic alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:bigPicid];
     }
-    bigPicCell.textLabel.text = @"测试数据";
     
     // 自适应高度
     [bigPicCell calculateHeight];
     
     return bigPicCell;
+    
 }
+
 
 #pragma mark - cell自适应高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    BigPic *bigPicCell = (BigPic *)[self tableView:self.tableView cellForRowAtIndexPath:indexPath];
+    if (indexPath.section == 1) {
+        BigPic *bigPicCell = (BigPic *)[self tableView:self.tableView cellForRowAtIndexPath:indexPath];
+        
+        return bigPicCell.frame.size.height;
+    } else 
     
-    return bigPicCell.frame.size.height;
+    
 }
 
 - (void)dealloc
 {
     [self.tableView release];
-    self.arr = nil;
+    self.AllModelArr = nil;
     self.dic = nil;
     [super dealloc];
 }

@@ -34,7 +34,6 @@
     // 起始点是view的三分之一
     self.summarizeButton.tag = 101;
     self.summarizeButton.frame = CGRectMake(self.frame.size.width / 6 - 25, 7 , 50, 25);
-    NSLog(@"%f" , self.frame.size.width);
     [self.summarizeButton setTitle:@"综述" forState:UIControlStateNormal];
     [self addSubview:self.summarizeButton];
     

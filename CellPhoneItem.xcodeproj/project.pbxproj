@@ -20,6 +20,7 @@
 		34C59CF61B3BB31300BE6FED /* ParamArr.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C59CF51B3BB31300BE6FED /* ParamArr.m */; };
 		34C59CF91B3BB33400BE6FED /* ExtraPros.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C59CF81B3BB33400BE6FED /* ExtraPros.m */; };
 		34C59CFC1B3BC48600BE6FED /* ExtraPrice.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C59CFB1B3BC48600BE6FED /* ExtraPrice.m */; };
+		34C59CFF1B3C066900BE6FED /* IntroCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C59CFE1B3C066900BE6FED /* IntroCell.m */; };
 		34CE425A1B3A723700B2B5B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 34CE42591B3A723700B2B5B5 /* main.m */; };
 		34CE425D1B3A723700B2B5B5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 34CE425C1B3A723700B2B5B5 /* AppDelegate.m */; };
 		34CE425F1B3A723700B2B5B5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34CE425E1B3A723700B2B5B5 /* Images.xcassets */; };
@@ -72,6 +73,8 @@
 		34C59CF81B3BB33400BE6FED /* ExtraPros.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtraPros.m; sourceTree = "<group>"; };
 		34C59CFA1B3BC48600BE6FED /* ExtraPrice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtraPrice.h; sourceTree = "<group>"; };
 		34C59CFB1B3BC48600BE6FED /* ExtraPrice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtraPrice.m; sourceTree = "<group>"; };
+		34C59CFD1B3C066900BE6FED /* IntroCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroCell.h; sourceTree = "<group>"; };
+		34C59CFE1B3C066900BE6FED /* IntroCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroCell.m; sourceTree = "<group>"; };
 		34CE42541B3A723700B2B5B5 /* CellPhoneItem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CellPhoneItem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34CE42581B3A723700B2B5B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34CE42591B3A723700B2B5B5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -150,6 +153,8 @@
 			children = (
 				34C59CE51B3B993600BE6FED /* BigPic.h */,
 				34C59CE61B3B993600BE6FED /* BigPic.m */,
+				34C59CFD1B3C066900BE6FED /* IntroCell.h */,
+				34C59CFE1B3C066900BE6FED /* IntroCell.m */,
 			);
 			name = CellStyleBySelf;
 			sourceTree = "<group>";
@@ -471,6 +476,7 @@
 			files = (
 				34C59CF21B3BAFEC00BE6FED /* ProductDetailModel.m in Sources */,
 				34CE425D1B3A723700B2B5B5 /* AppDelegate.m in Sources */,
+				34C59CFF1B3C066900BE6FED /* IntroCell.m in Sources */,
 				34C59CF91B3BB33400BE6FED /* ExtraPros.m in Sources */,
 				34CE42851B3A72EA00B2B5B5 /* ProductDetailsView.m in Sources */,
 				34CE425A1B3A723700B2B5B5 /* main.m in Sources */,

@@ -13,6 +13,7 @@
 @property (nonatomic , retain) UIImageView *imageViewK;
 @property (nonatomic , retain) UILabel *labelK;
 
+
 // 用来计算cell的高度
 - (void)calculateHeight;
 

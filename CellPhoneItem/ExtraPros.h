@@ -13,7 +13,9 @@
 
 @property (nonatomic , retain) NSString *name;
 @property (nonatomic , retain) NSString *brief;
-@property (nonatomic , retain) ExtraPrice *extraPirce;
+@property (nonatomic , retain) NSMutableArray *arrExitra;
+
+- (instancetype)initWithDictionary:(NSDictionary *)dic;
 
 @end
 

@@ -25,11 +25,14 @@
     self.backgroundColor = [UIColor whiteColor];
     
     // 添加一个ImageView
-    self.imageViewK = [CreatWidget creatImageViewWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height - 40) image:nil];
+    self.imageViewK = [CreatWidget creatImageViewWithFrame:CGRectMake(0, 0, self.frame.size.width, 170) image:[UIImage imageNamed:@"已收藏"]];
     self.imageViewK.backgroundColor = [UIColor redColor];
+    [self addSubview:self.imageViewK];
     
     // 添加一个label
-    self.labelK = [CreatWidget creatLabelWithFrame:CGRectMake(0, self.imageViewK.frame.size.height, self.frame.size.width, 30) text:@"查看更多图片" textColor:[UIColor orangeColor] font:20];
+    self.labelK = [CreatWidget creatLabelWithFrame:CGRectMake(0, self.imageViewK.frame.size.height, self.frame.size.width, 30) text:@"查看更多图片" textColor:[UIColor orangeColor] font:17];
+    self.labelK.textAlignment = NSTextAlignmentCenter;
+    [self addSubview:self.labelK];
 }
 
 #pragma mark - cell的自适应高度

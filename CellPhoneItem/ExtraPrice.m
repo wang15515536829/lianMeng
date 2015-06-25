@@ -10,4 +10,16 @@
 
 @implementation ExtraPrice
 
+- (instancetype)initWithDictionary:(NSDictionary *)dic
+{
+    self = [super init];
+    if (self) {
+        if (![dic isKindOfClass:[NSNull class]]) {
+        self.name =  [dic valueForKey:@"name"];
+        self.price = [dic valueForKey:@"price"];
+        }
+    }
+    return self;
+}
+
 @end

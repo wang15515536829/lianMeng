@@ -14,9 +14,11 @@
 {
     self = [super init];
     if (self) {
+        if (![dic isKindOfClass:[NSNull class]]) {
         self.name = [dic objectForKey:@"name"];
         self.brief = [dic objectForKey:@"brief"];
         self.priceRange = [dic objectForKey:@"priceRange"];
+        }
     }
     return self;
 }

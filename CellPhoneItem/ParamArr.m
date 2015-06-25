@@ -10,4 +10,16 @@
 
 @implementation ParamArr
 
+- (instancetype)initWithDictionary:(NSDictionary *)dic
+{
+    self = [super init];
+    if (self) {
+        if (![dic isKindOfClass:[NSNull class]]) {
+        self.name = [dic objectForKey:@"name"];
+        self.value = [dic objectForKey:@"value"];
+        }
+    }
+    return self;
+}
+
 @end

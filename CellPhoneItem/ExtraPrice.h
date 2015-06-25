@@ -13,4 +13,6 @@
 @property (nonatomic , retain) NSString *name;
 @property (nonatomic , retain) NSString *price;
 
+- (instancetype)initWithDictionary:(NSDictionary *)dic;
+
 @end
